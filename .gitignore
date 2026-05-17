@@ -1,0 +1,24 @@
+# Google Drive 同期の一時ファイル
+*.tmp.driveupload
+*.tmp.drivedownload
+.tmp.driveupload/
+.tmp.drivedownload/
+
+# OSのゴミファイル
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# エディタ・IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# バックアップ
+*.bak
+*.orig
+
+# ローカル限定の作業ファイル
+.tmp/
+.cache/

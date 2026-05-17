@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Komi Lab. — RPAで、人生が変わる。</title>
+<meta name="description" content="RPAで業務を自動化し、人にしかできない仕事に集中できる毎日を。Komi Lab.（コミラボ）は、開発代行・内製化トレーニング・市民開発者の伴走支援を提供しています。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=M+PLUS+Rounded+1c:wght@500;700&family=Klee+One:wght@400;600&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=20260517k">
+</head>
+<body>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="#" class="header__logo header__logo--img" aria-label="Komi Lab.">
+      <img src="../assets/img/KomiLab-logo透過.png" alt="Komi Lab.">
+    </a>
+    <nav class="header__nav" id="globalNav">
+      <a href="#about">私のこと</a>
+      <a href="#prep">要件整理</a>
+      <a href="#service">できること</a>
+      <a href="#tech">技術</a>
+      <a href="#areas">対応領域</a>
+      <a href="#voice">お客様の声</a>
+      <a href="profile.html">プロフィール</a>
+    </nav>
+    <a href="#contact" class="header__cta">相談する</a>
+    <button class="header__burger" id="burger" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero__inner">
+    <div class="hero__copy fade-in">
+      <span class="hero__tag">FOR A KINDER WORKDAY</span>
+      <h1 class="hero__title">RPAとAIで、<br><span class="hero__title-em">人生が変わる</span>。</h1>
+      <p class="hero__lead">
+        「面倒くさい」をロボットに任せて、考えるところはAIに助けてもらう。RPA × AIエージェントで働き方をやさしく整える、komi-lab. です。
+      </p>
+      <div class="hero__ctas">
+        <a href="#contact" class="btn btn--primary">まずは話してみる →</a>
+        <a href="#about" class="btn btn--ghost">komi について知る</a>
+      </div>
+    </div>
+    <div class="hero__visual fade-in">
+      <img class="hero__avatar hero__avatar--img" src="../assets/img/komi-cat.png" alt="Komi Lab. キャラクター" loading="eager">
+      <!-- フォールバックSVG（画像が無い場合に表示） -->
+      <svg class="hero__avatar hero__avatar--svg" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" style="display:none;">
+        <defs>
+          <linearGradient id="bgGradV2" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#e3f6f5"/>
+            <stop offset="100%" stop-color="#bae8e8"/>
+          </linearGradient>
+        </defs>
+        <circle cx="210" cy="210" r="200" fill="url(#bgGradV2)"/>
+        <!-- 装飾ドット -->
+        <circle cx="80" cy="120" r="6" fill="#ffd803"/>
+        <circle cx="340" cy="100" r="5" fill="#272343" opacity="0.6"/>
+        <circle cx="360" cy="300" r="5" fill="#ffd803"/>
+        <circle cx="60" cy="310" r="4" fill="#272343" opacity="0.5"/>
+        <!-- 髪 -->
+        <path d="M 130 175 Q 130 110 210 105 Q 290 110 290 175 L 290 200 Q 290 185 270 180 L 150 180 Q 130 185 130 200 Z" fill="#272343"/>
+        <!-- 顔 -->
+        <ellipse cx="210" cy="200" rx="68" ry="78" fill="#fce3c2"/>
+        <!-- 前髪 -->
+        <path d="M 145 175 Q 175 145 210 150 Q 245 145 275 175 Q 270 165 250 160 Q 230 168 210 168 Q 190 168 170 160 Q 150 165 145 175 Z" fill="#272343"/>
+        <!-- 目 -->
+        <circle cx="188" cy="205" r="4" fill="#272343"/>
+        <circle cx="232" cy="205" r="4" fill="#272343"/>
+        <!-- ほっぺ -->
+        <circle cx="175" cy="225" r="8" fill="#ffd803" opacity="0.55"/>
+        <circle cx="245" cy="225" r="8" fill="#ffd803" opacity="0.55"/>
+        <!-- 口 -->
+        <path d="M 200 240 Q 210 248 220 240" stroke="#272343" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        <!-- 体（黄色シャツ） -->
+        <path d="M 130 320 Q 130 290 165 280 L 255 280 Q 290 290 290 320 L 290 360 L 130 360 Z" fill="#ffd803"/>
+        <!-- 襟 -->
+        <path d="M 195 280 L 210 300 L 225 280 Z" fill="#fce3c2"/>
+        <!-- 歯車（左下） -->
+        <g transform="translate(80, 260)" opacity="0.85">
+          <circle r="22" fill="none" stroke="#272343" stroke-width="2.5"/>
+          <circle r="6" fill="#272343"/>
+          <g stroke="#272343" stroke-width="2.5" stroke-linecap="round">
+            <line x1="0" y1="-22" x2="0" y2="-30"/>
+            <line x1="0" y1="22" x2="0" y2="30"/>
+            <line x1="-22" y1="0" x2="-30" y2="0"/>
+            <line x1="22" y1="0" x2="30" y2="0"/>
+          </g>
+        </g>
+        <!-- 小さい黄色ドット -->
+        <g transform="translate(345, 220)" opacity="0.9">
+          <circle r="14" fill="#ffd803"/>
+          <circle r="4" fill="#272343"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container">
+    <p class="section__label fade-in">About</p>
+    <h2 class="section__title fade-in">
+      「面倒くさい」を、<span class="section__title-accent">味方にしたかった。</span>
+    </h2>
+    <div class="about__grid">
+      <div class="about__heading-wrap fade-in">
+        <p class="about__heading">
+          ツールより、人の<br>"やりたい" を起点に。
+        </p>
+        <p style="color: var(--text-sub); font-size: 14px;">— komi / RPAエンジニア</p>
+      </div>
+      <div class="about__body fade-in">
+        <p class="about__lead">
+          はじめまして、komi（コミ）です。RPAエンジニアとして、企業の業務自動化や、内製化トレーニングのお手伝いをしています。
+        </p>
+        <p class="about__lead">
+          私がRPAに惹かれたのは、ツールそのものよりも、<strong>「人が、人にしかできない仕事に集中できる世界」</strong>を作れる手応えがあったから。最近はそこにAIエージェントが加わって、「任せられる仕事」の幅がぐっと広がってきました。
+        </p>
+        <p class="about__lead">
+          毎日くりかえす入力作業、転記、確認のメール送信——。ひとつひとつは小さくても、積み重なると気力をすり減らす作業ってありますよね。そういう「面倒くさい」を、ロボットにそっと任せる。そのぶん空いた時間で、人は人と話したり、考えたり、休んだりできる。
+        </p>
+
+        <ul class="about__values">
+          <li>
+            <span class="about__values-num">1</span>
+            <div class="about__values-text">
+              <strong>ツールより、人の "やりたい" を起点に。</strong>
+              <span>RPAを導入すること自体が目的にならないように、まず「何を楽にしたいか」を一緒に整理します。</span>
+            </div>
+          </li>
+          <li>
+            <span class="about__values-num">2</span>
+            <div class="about__values-text">
+              <strong>「自分たちで動かせる」状態まで届ける。</strong>
+              <span>作って渡して終わり、ではなく、内製化までを意識して伴走します。</span>
+            </div>
+          </li>
+          <li>
+            <span class="about__values-num">3</span>
+            <div class="about__values-text">
+              <strong>小さくはじめて、続けられるように。</strong>
+              <span>いきなり大規模に作るより、小さく動かして、暮らしと業務になじむペースを大切に。</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Prep / 要件整理 ====== -->
+<section class="section prep" id="prep">
+  <div class="container">
+    <p class="section__label fade-in" style="text-align:center; justify-content:center; display:flex;">First Step</p>
+    <h2 class="section__title section__title--center fade-in">
+      「何を頼めばいいか」も、<br><span class="section__title-accent">一緒に整理します。</span>
+    </h2>
+    <p class="service__lead fade-in">
+      「自動化したいけど何から始めれば」「うちの業務、そもそも自動化向き？」——そんなところからのご相談、大歓迎です。要件整理・要件定義から、ご一緒します。
+    </p>
+
+    <ul class="prep-steps">
+      <li class="prep-step fade-in">
+        <div class="prep-step__badge">1</div>
+        <div class="prep-step__body">
+          <h3 class="prep-step__title">まず、聞く</h3>
+          <p class="prep-step__desc">困りごと、ちょっとした違和感、「これ何とかしたい」を、雑談ベースでうかがいます。整理されていない状態でOKです。</p>
+        </div>
+      </li>
+      <li class="prep-step fade-in">
+        <div class="prep-step__badge">2</div>
+        <div class="prep-step__body">
+          <h3 class="prep-step__title">一緒に棚卸し</h3>
+          <p class="prep-step__desc">業務の流れを一緒に書き出して、「人がやるべきこと」「機械やAIに任せたいこと」を切り分けます。</p>
+        </div>
+      </li>
+      <li class="prep-step fade-in">
+        <div class="prep-step__badge">3</div>
+        <div class="prep-step__body">
+          <h3 class="prep-step__title">要件にまとめる</h3>
+          <p class="prep-step__desc">「何を／どう動かすか」を設計書として形に。ここから先のプランへなめらかに接続できます。</p>
+        </div>
+      </li>
+    </ul>
+
+    <p class="prep__note fade-in">
+      ※ ご相談の段階で「やっぱり自動化しない方がいい」という結論になることもあります。それも含めて、フラットにお話しします。
+    </p>
+  </div>
+</section>
+
+<section class="section section--soft" id="service">
+  <div class="container">
+    <p class="section__label fade-in" style="text-align:center; justify-content:center; display:flex;">Service</p>
+    <h2 class="section__title section__title--center fade-in">
+      <span class="section__title-accent">できること</span>
+    </h2>
+    <p class="service__lead fade-in">
+      「何をどこまでお願いできるんだろう？」が分かるように、3つのプランに整理しました。組み合わせも、まずは相談だけも、OKです。
+    </p>
+
+    <div class="service__cards">
+      <div class="service-card fade-in">
+        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="3" y="4" width="18" height="14" rx="2"/>
+          <path d="M8 21h8M12 18v3"/>
+          <circle cx="12" cy="11" r="3"/>
+        </svg>
+        <p class="service-card__label">PLAN 01</p>
+        <h3 class="service-card__title">RPA × AI で<br>業務を自動化</h3>
+        <p class="service-card__catch">「とにかく、この作業を自動化してほしい」方へ。</p>
+        <p class="service-card__list-title">含まれるもの</p>
+        <ul class="service-card__list">
+          <li>業務ヒアリング・自動化対象の整理</li>
+          <li>RPA＋AIの組み合わせ設計・開発（UiPath ／ Power Automate ／ Claude 等）</li>
+          <li>動作テストと本番投入サポート</li>
+          <li>操作マニュアルと運用引き継ぎ</li>
+        </ul>
+        <p class="service-card__list-title">こんな方へ</p>
+        <ul class="service-card__list">
+          <li>社内に作れる人がいない</li>
+          <li>RPA単体では難しかった業務もAIで突破したい</li>
+        </ul>
+      </div>
+
+      <div class="service-card fade-in">
+        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 7l10-5 10 5-10 5L2 7z"/>
+          <path d="M6 9v6c0 1.5 3 3 6 3s6-1.5 6-3V9"/>
+        </svg>
+        <p class="service-card__label">PLAN 02</p>
+        <h3 class="service-card__title">内製化トレーニング</h3>
+        <p class="service-card__catch">「自分たちで作れるようになりたい」チームへ。</p>
+        <p class="service-card__list-title">含まれるもの</p>
+        <ul class="service-card__list">
+          <li>業務に即したカリキュラム設計（RPA／AIツール）</li>
+          <li>少人数オンライン or 訪問形式の講座</li>
+          <li>演習用サンプル・プロンプト集の提供</li>
+          <li>質問対応・フォローアップ期間</li>
+        </ul>
+        <p class="service-card__list-title">こんな方へ</p>
+        <ul class="service-card__list">
+          <li>情シス・DX推進部の人材育成を進めたい</li>
+          <li>現場の人がRPA／AIを自分で使いこなせるように</li>
+        </ul>
+      </div>
+
+      <div class="service-card fade-in">
+        <svg class="service-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+        </svg>
+        <p class="service-card__label">PLAN 03</p>
+        <h3 class="service-card__title">AIエージェントで<br>仕事を仕組み化</h3>
+        <p class="service-card__catch">「AIに任せられる仕事を、もっと増やしたい」方へ。</p>
+        <p class="service-card__list-title">含まれるもの</p>
+        <ul class="service-card__list">
+          <li>業務にフィットするAIエージェントの設計</li>
+          <li>Claude Code 等を活用したワークフロー構築</li>
+          <li>プロンプト設計・運用ルール整備</li>
+          <li>導入後の改善・伴走サポート</li>
+        </ul>
+        <p class="service-card__list-title">こんな方へ</p>
+        <ul class="service-card__list">
+          <li>「AIを使ってみたいけど、何から始めれば」が見えない</li>
+          <li>すでにChatGPT等は触っているが、業務に組み込めていない</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="service__note fade-in">
+      <p style="margin:0 0 6px;">※ 料金はご相談内容により変動します。お問い合わせ後にお見積もりをお出しします。</p>
+      <p style="margin:0;">※ プランの組み合わせ・カスタマイズ可能。守秘義務契約（NDA）にも対応しています。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ====== Tech Stack ====== -->
+<section class="section" id="tech">
+  <div class="container">
+    <p class="section__label fade-in" style="text-align:center; justify-content:center; display:flex;">Tech Stack</p>
+    <h2 class="section__title section__title--center fade-in">
+      使っている<span class="section__title-accent">主な技術</span>
+    </h2>
+    <p class="service__lead fade-in">
+      業務やプロジェクトに合わせて、こんなツール・技術を組み合わせて使っています。お持ちの環境に合わせて柔軟に対応します。
+    </p>
+
+    <div class="logo-wall-group">
+      <h3 class="logo-wall-group__title">業務で使っている主な技術</h3>
+      <div class="logo-wall fade-in">
+      <div class="logo-wall__item">
+        <svg class="logo-wall__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="6" width="16" height="12" rx="2"/><circle cx="9" cy="12" r="1.5"/><circle cx="15" cy="12" r="1.5"/><path d="M12 18v3M10 21h4"/></svg>
+        <span class="logo-wall__name">UiPath</span>
+      </div>
+      <div class="logo-wall__item">
+        <svg class="logo-wall__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <span class="logo-wall__name">Power Automate</span>
+      </div>
+      <div class="logo-wall__item">
+        <svg class="logo-wall__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8z"/><circle cx="19" cy="5" r="1.2"/><circle cx="5" cy="19" r="1.2"/></svg>
+        <span class="logo-wall__name">Claude</span>
+      </div>
+      <div class="logo-wall__item">
+        <svg class="logo-wall__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><polyline points="8 10 6 12 8 14"/><polyline points="14 10 16 12 14 14"/><line x1="11" y1="9" x2="10" y2="15"/></svg>
+        <span class="logo-wall__name">Claude Code</span>
+      </div>
+      <div class="logo-wall__item">
+        <svg class="logo-wall__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.7 7.4L3 21l1.9-5.7A8.5 8.5 0 1 1 21 11.5z"/></svg>
+        <span class="logo-wall__name">ChatGPT</span>
+      </div>
+      <div class="logo-wall__item">
+        <svg class="logo-wall__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><polyline points="8 10 6 12 8 14"/><polyline points="14 10 16 12 14 14"/><line x1="11" y1="9" x2="10" y2="15"/></svg>
+        <span class="logo-wall__name">Codex</span>
+      </div>
+      <div class="logo-wall__item">
+        <svg class="logo-wall__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c0 5 5 10 10 10-5 0-10 5-10 10 0-5-5-10-10-10 5 0 10-5 10-10z"/></svg>
+        <span class="logo-wall__name">Gemini</span>
+      </div>
+      <div class="logo-wall__item">
+        <svg class="logo-wall__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3 0-5 1.5-5 4v3h6v1H5c-2 0-3 2-3 5s1 5 3 5h2v-3c0-2 2-3.5 5-3.5"/><path d="M12 21c3 0 5-1.5 5-4v-3h-6v-1h8c2 0 3-2 3-5s-1-5-3-5h-2v3c0 2-2 3.5-5 3.5"/></svg>
+        <span class="logo-wall__name">Python</span>
+      </div>
+<div class="logo-wall__item">
+        <svg class="logo-wall__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 10h18M3 16h18M10 4v16M16 4v16"/></svg>
+        <span class="logo-wall__name">VBA</span>
+      </div>
+      <div class="logo-wall__item">
+        <svg class="logo-wall__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><polyline points="9 13 11 15 15 11"/></svg>
+        <span class="logo-wall__name">Google Apps Script</span>
+      </div>
+      <div class="logo-wall__item">
+        <svg class="logo-wall__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="9" cy="9" r="1.2"/><circle cx="15" cy="9" r="1.2"/><circle cx="16.5" cy="13" r="1.2"/><circle cx="7.5" cy="13" r="1.2"/><path d="M12 17a3 3 0 0 0 0-6"/></svg>
+        <span class="logo-wall__name">Canva</span>
+      </div>
+      <div class="logo-wall__item">
+        <svg class="logo-wall__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9h18M3 15h18M7 5v14M17 5v14"/><polygon points="10 11 14 12 10 13" fill="currentColor"/></svg>
+        <span class="logo-wall__name">Filmora</span>
+      </div>
+      </div>
+    </div>
+
+    <div class="logo-wall-group">
+      <h3 class="logo-wall-group__title">連絡・タスク管理に使っているもの</h3>
+      <div class="logo-wall fade-in">
+      <div class="logo-wall__item">
+        <svg class="logo-wall__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3.5-7.1"/><path d="M12 12h9"/></svg>
+        <span class="logo-wall__name">Google Workspace</span>
+      </div>
+      <div class="logo-wall__item">
+        <svg class="logo-wall__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg>
+        <span class="logo-wall__name">Microsoft 365</span>
+      </div>
+      <div class="logo-wall__item">
+        <svg class="logo-wall__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="9" x2="20" y2="9"/><line x1="4" y1="15" x2="20" y2="15"/><line x1="10" y1="3" x2="8" y2="21"/><line x1="16" y1="3" x2="14" y2="21"/></svg>
+        <span class="logo-wall__name">Slack</span>
+      </div>
+      <div class="logo-wall__item">
+        <svg class="logo-wall__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="2"/><line x1="8" y1="8" x2="16" y2="8"/><line x1="8" y1="12" x2="16" y2="12"/><line x1="8" y1="16" x2="13" y2="16"/></svg>
+        <span class="logo-wall__name">Notion</span>
+      </div>
+      <div class="logo-wall__item">
+        <svg class="logo-wall__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><rect x="6" y="7" width="3" height="6" rx="0.5"/><rect x="10.5" y="7" width="3" height="4" rx="0.5"/><rect x="15" y="7" width="3" height="9" rx="0.5"/></svg>
+        <span class="logo-wall__name">Backlog</span>
+      </div>
+      <div class="logo-wall__item">
+        <svg class="logo-wall__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6c0-1.1.9-2 2-2h12a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2l-3 3v-3H6a2 2 0 0 1-2-2z"/><circle cx="9" cy="11" r="1.2"/><circle cx="15" cy="11" r="1.2"/></svg>
+        <span class="logo-wall__name">Discord</span>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="areas">
+  <div class="container">
+    <p class="section__label fade-in" style="text-align:center; justify-content:center; display:flex;">Areas</p>
+    <h2 class="section__title section__title--center fade-in">
+      <span class="section__title-accent">対応領域</span>
+    </h2>
+    <p class="service__lead fade-in">
+      過去の経験をもとに、こんな業種・業務でお力になれます。もちろん、ここに無いご相談も歓迎です。
+    </p>
+
+    <div class="areas__grid">
+      <div class="area-item fade-in">
+        <svg class="area-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h.01M15 9h.01M9 13h.01M15 13h.01M9 17h.01M15 17h.01"/></svg>
+        <div class="area-item__name">金融</div>
+        <div class="area-item__desc">帳票処理／レポート集計／確認業務</div>
+      </div>
+      <div class="area-item fade-in">
+        <svg class="area-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6l2 4H2zM22 3h-6l-2 4h8zM12 7l-2 14h4l-2-14z"/><path d="M2 7v14h20V7"/></svg>
+        <div class="area-item__name">商社・卸</div>
+        <div class="area-item__desc">受発注・在庫管理／メール定型処理</div>
+      </div>
+      <div class="area-item fade-in">
+        <svg class="area-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        <div class="area-item__name">バックオフィス</div>
+        <div class="area-item__desc">経理・労務／月次集計／勤怠連携</div>
+      </div>
+      <div class="area-item fade-in">
+        <svg class="area-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <div class="area-item__name">人事・採用</div>
+        <div class="area-item__desc">応募者管理／日程調整／オンボーディング</div>
+      </div>
+      <div class="area-item fade-in">
+        <svg class="area-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+        <div class="area-item__name">EC・通販</div>
+        <div class="area-item__desc">受注処理／在庫同期／レビュー収集</div>
+      </div>
+      <div class="area-item fade-in">
+        <svg class="area-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v6H4zM4 14h16v6H4z"/><circle cx="8" cy="7" r="1"/><circle cx="8" cy="17" r="1"/></svg>
+        <div class="area-item__name">情シス／DX</div>
+        <div class="area-item__desc">社内システム連携／定型レポート配信</div>
+      </div>
+      <div class="area-item fade-in">
+        <svg class="area-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        <div class="area-item__name">マーケ・分析</div>
+        <div class="area-item__desc">広告レポート／競合調査／データ集約</div>
+      </div>
+      <div class="area-item fade-in">
+        <svg class="area-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        <div class="area-item__name">教育・研修</div>
+        <div class="area-item__desc">RPA研修設計／市民開発研修</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--soft" id="voice">
+  <div class="container">
+    <p class="section__label fade-in" style="text-align:center; justify-content:center; display:flex;">Voice</p>
+    <h2 class="section__title section__title--center fade-in">
+      関わってくださった<span class="section__title-accent">みなさんの声</span>
+    </h2>
+
+    <div class="voice__list">
+      <div class="voice-card fade-in">
+        <p class="voice-card__text">
+          業務の棚卸しから一緒にやってもらえたのが大きかったです。「これは自動化しなくていい」と切り捨ててくれる判断も含めて、信頼できました。
+        </p>
+        <p class="voice-card__from">— 小売業 / ご担当者様</p>
+      </div>
+      <div class="voice-card fade-in">
+        <p class="voice-card__text">
+          講座のあと、現場のメンバーが「自分でも作れるかも」と前向きになったのが何より。ツールの話だけじゃなく、関わる人のテンションまで変えてくれる伴走でした。
+        </p>
+        <p class="voice-card__from">— 金融業 / ご担当者様</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="container">
+    <p class="section__label fade-in" style="text-align:center; justify-content:center; display:flex;">Contact</p>
+    <h2 class="contact__title fade-in">
+      まずは、<span class="section__title-accent">お話しましょう。</span>
+    </h2>
+    <p class="contact__lead fade-in">
+      「これ、自動化できるかな？」と思ったその瞬間が、いちばんの相談タイミング。ちょっとした話し相手としても、お気軽にどうぞ。
+    </p>
+    <div class="contact__ctas fade-in">
+      <a href="https://forms.gle/31PYNc57BEaf69FNA" target="_blank" rel="noopener" class="btn btn--primary">無料で相談する →</a>
+      <a href="profile.html" class="btn btn--ghost">プロフィールを見る</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <img src="../assets/img/KomiLab-logotype.png" alt="Komi Lab." class="footer__brand-img">
+      <div class="footer__tagline">RPAとAIで、人生が変わる。</div>
+    </div>
+    <nav class="footer__nav">
+      <a href="#about">私のこと</a>
+      <a href="#prep">要件整理</a>
+      <a href="#service">できること</a>
+      <a href="#tech">技術</a>
+      <a href="#areas">対応領域</a>
+      <a href="profile.html">プロフィール</a>
+      <a href="#contact">お問い合わせ</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+    </nav>
+  </div>
+  <div class="footer__copyright">© 2022 Komi Lab.</div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
