@@ -22,3 +22,7 @@ desktop.ini
 # ローカル限定の作業ファイル
 .tmp/
 .cache/
+
+# 公開対象外
+CLAUDE.md
+note-migration/
