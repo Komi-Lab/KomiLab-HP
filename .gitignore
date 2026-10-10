@@ -24,5 +24,9 @@ desktop.ini
 .cache/
 
 # 公開対象外
+# リポジトリのルートがそのまま HP として公開されるため、内部メモはここで除外する
 CLAUDE.md
 note-migration/
+design-notes.md
+content-draft/
+_claude_memo.md
